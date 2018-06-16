@@ -8,7 +8,10 @@ function respond(req, res, next) {
 
 var server = restify.createServer();
 server.get('/hello/:name', respond);
-server.head('/hello/:name', respond);
+
+server.post('/garage/toggle', (req, res) => {
+  res.send('Garage Door Toggled');
+});
 
 server.listen(80, function() {
   console.log('%s listening at %s', server.name, server.url);
