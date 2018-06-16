@@ -1,5 +1,5 @@
-import rpio from 'rpio';
-import { createServer } from 'restify';
+var rpio = require('rpio');
+var server = require('restify');
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
