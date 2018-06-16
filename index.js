@@ -1,12 +1,12 @@
 var rpio = require('rpio');
-var server = require('restify');
+var restify = require('restify');
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
   next();
 }
 
-var server = createServer();
+var server = restify.createServer();
 server.get('/hello/:name', respond);
 server.head('/hello/:name', respond);
 
