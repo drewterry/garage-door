@@ -10,7 +10,7 @@ var server = restify.createServer();
 server.get('/hello/:name', respond);
 
 server.get('/garage/activate', (req, res, next) => {
-  res.send('Garage Door ACtivated');
+  res.send('Garage Door Activated');
   next();
 });
 
