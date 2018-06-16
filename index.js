@@ -9,9 +9,8 @@ function respond(req, res, next) {
 var server = restify.createServer();
 server.get('/hello/:name', respond);
 
-server.get('/garage/activate', (req, res, next) => {
+server.get('/garage/activate', (req, res) => {
   res.send('Garage Door Activated');
-  next();
 });
 
 server.listen(80, function() {
