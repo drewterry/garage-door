@@ -10,7 +10,7 @@ var server = restify.createServer();
 server.get('/hello/:name', respond);
 
 server.get('/garage/activate', (req, res) => {
-  console.log(`Activated by ${req.url}`);
+  console.log(`Activated by ${req.connection.remoteAddress}`);
   res.send('Garage Door Activated');
 });
 
